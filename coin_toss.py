@@ -33,13 +33,13 @@ plt.hist(final_head, bins = 10, edgecolor = 'k', density = True, color = 'skyblu
 plt.plot(prob, linestyle = '--', marker = 'o', color = 'k')
 
 # A vertical line to show mean
-plt.axvline(np.mean(final_head), color = 'red', label = 'Mean')
+plt.axvline(np.mean(final_head), color = 'red', label = 'Mean', alpha = 0.4, linestyle = '--')
 
 # A vertical line to show median
-plt.axvline(np.median(final_head), color = 'yellow', label = 'Median')
+plt.axvline(np.median(final_head), color = 'yellow', label = 'Median', alpha = 1.0, linestyle = 'dotted')
 
 # A vertical line to show mode
-plt.axvline(stats.mode(final_head)[0], color = 'blue', label = 'Mode')
+plt.axvline(stats.mode(final_head)[0], color = 'blue', label = 'Mode', alpha = 0.4)
 
 plt.xlabel('Number of Heads')
 plt.ylabel('Probability')
