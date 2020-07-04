@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
+plt.style.use('ggplot')
 np.random.seed(123)
 final_head = []
 
@@ -15,11 +16,10 @@ for x in range(10000):
 
 prob = []
 
-print(final_head.count(0))
 
 for i in range(11):
     prob.append(final_head.count(i)/len(final_head))
-print(prob)
+
 
 
 plt.hist(final_head, bins = 10, edgecolor = 'k', density = True, color = 'skyblue', alpha = 0.6)
@@ -30,6 +30,7 @@ plt.axvline(np.median(final_head), color = 'yellow', label = 'Median')
 
 plt.xlabel('Number of Heads')
 plt.ylabel('Probability')
+plt.title('Probability Distribution')
 plt.legend()
 plt.xticks(range(11))
 plt.show()
